@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
@@ -15,7 +16,9 @@ function NavBar() {
                 <NavDropdown.Item href="#action/3.1">Telefonia</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Televisión</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link">Contacto</Nav.Link>
+              <Nav.Link href="#link">
+                <CartWidget />
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
