@@ -11,12 +11,12 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Preguntas Frecuentes</Nav.Link>
+              <Nav.Link href="#preguntas">Preguntas Frecuentes</Nav.Link>
               <NavDropdown title="Planes" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Telefonia</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Televisión</NavDropdown.Item>
+                <NavDropdown.Item href="#Telefonia">Telefonia</NavDropdown.Item>
+                <NavDropdown.Item href="#Televisión">Televisión</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link">
+              <Nav.Link href="#carrito">
                 <CartWidget />
               </Nav.Link>
             </Nav>
