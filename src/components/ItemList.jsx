@@ -6,7 +6,7 @@ export default function ItemList({ items }) {
     <>
       <Row xs={1} md={2} lg={4} className="g-4 m-4">
         {items.map((item) => {
-          return <Item id="01" title={item.title} price={item.price} pictureUrl={item.pictureUrl} stock={item.stock} origen={item.origen} />;
+          return <Item id="01" title={item.operadora} precio={item.min_pesos} pictureUrl={item.logo} stock={item.stock} />;
         })}
       </Row>
     </>

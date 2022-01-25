@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "operadora": "Digitel",
+    "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/digitel.svg",
+    "imagen": "./imagenes/planes_muestra.jpg",
+    "categoria": "telefonia",
+    "stock": 10,
+    "min_pesos": 300,
+    "max_pesos": 30000,
+    "planes": [
+      { "plan": "Bronce", "color": "Bronce", "precio_pesos": 300, "precio_bs": 5 },
+      { "plan": "Plata", "color": "Plata", "precio_pesos": 600, "precio_bs": 10 },
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 850, "precio_bs": 15 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 1100, "precio_bs": 20 }
+    ]
+  },
+  {
+    "id": 2,
+    "operadora": "Movistar",
+    "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/movistar.svg",
+    "imagen": "./imagenes/planes_muestra.jpg",
+    "categoria": "telefonia",
+    "stock": 10,
+    "min_pesos": 250,
+    "max_pesos": 30000,
+    "planes": [
+      { "plan": "Bronce", "color": "Bronce", "precio_pesos": 250, "precio_bs": 4 },
+      { "plan": "Plata", "color": "Plata", "precio_pesos": 470, "precio_bs": 8 },
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 690, "precio_bs": 12 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 900, "precio_bs": 16 }
+    ]
+  },
+  {
+    "id": 3,
+    "operadora": "Movilnet",
+    "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/movilnet.svg",
+    "imagen": "./imagenes/planes_muestra.jpg",
+    "categoria": "telefonia",
+    "stock": 10,
+    "min_pesos": 250,
+    "max_pesos": 30000,
+    "planes": [
+      { "plan": "Bronce", "color": "Bronce", "precio_pesos": 250, "precio_bs": 4 },
+      { "plan": "Plata", "color": "Plata", "precio_pesos": 470, "precio_bs": 8 },
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 690, "precio_bs": 12 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 900, "precio_bs": 16 }
+    ]
+  },
+  {
+    "id": 4,
+    "operadora": "Inter",
+    "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/inter.svg",
+    "imagen": "./imagenes/planes_muestra.jpg",
+    "categoria": "television",
+    "stock": 10,
+    "min_pesos": 300,
+    "max_pesos": "consultar factura",
+    "planes": [
+      { "plan": "Bronce", "color": "Bronce", "precio_pesos": 300, "precio_bs": 5 },
+      { "plan": "Plata", "color": "Plata", "precio_pesos": 600, "precio_bs": 10 },
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 1150, "precio_bs": 15 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 1400, "precio_bs": 20 }
+    ]
+  },
+  {
+    "id": 5,
+    "operadora": "Simple TV",
+    "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/simple_tv.svg",
+    "imagen": "./imagenes/planes_muestra.jpg",
+    "categoria": "television",
+    "stock": 10,
+    "min_pesos": 300,
+    "max_pesos": "consultar factura",
+    "planes": [
+      { "plan": "Bronce", "color": "Bronce", "precio_pesos": 300, "precio_bs": 5 },
+      { "plan": "Plata", "color": "Plata", "precio_pesos": 600, "precio_bs": 10 },
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 1150, "precio_bs": 15 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 1400, "precio_bs": 20 }
+    ]
+  },
+  {
+    "id": 6,
+    "operadora": "Movistar TV",
+    "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/movistar_tv.svg",
+    "imagen": "./imagenes/planes_muestra.jpg",
+    "categoria": "television",
+    "stock": 10,
+    "min_pesos": 250,
+    "max_pesos": "consultar factura",
+    "planes": [
+      { "plan": "Bronce", "color": "Bronce", "precio_pesos": 250, "precio_bs": 4 },
+      { "plan": "Plata", "color": "Plata", "precio_pesos": 470, "precio_bs": 8 },
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 690, "precio_bs": 12 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 900, "precio_bs": 16 }
+    ]
+  }
+]
