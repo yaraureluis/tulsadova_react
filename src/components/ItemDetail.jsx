@@ -1,7 +1,9 @@
 import React from "react";
 import { Row, Col, Figure, Card, Button, ListGroup } from "react-bootstrap";
+import ItemCount from "./ItemCount.jsx";
 
 export default function ItemDetail({ operadora, logo, imagen, min, max, planes, tipo, stock }) {
+  const onAdd = (cantidad) => alert("Se agregaron " + cantidad + " items al carrito.");
   return (
     <>
       <h1>Planes Telefonía</h1>
@@ -45,7 +47,12 @@ export default function ItemDetail({ operadora, logo, imagen, min, max, planes, 
                 <strong>Stock disponible: </strong>
                 {stock}
               </Card.Text>
-              <Button variant="primary">Comprar ahora</Button>
+              <div className="d-grid gap-2, text-center">
+                <ItemCount stock={stock} inicia="1" onAdd={onAdd} />
+                <Button variant="primary" className="mt-3 ">
+                  Comprar ahora
+                </Button>
+              </div>
             </Card.Body>
           </Card>
           <Card style={{ width: "100%", marginTop: "15px" }}>

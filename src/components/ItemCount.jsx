@@ -16,7 +16,7 @@ function ItemCount({ stock, inicia, onAdd }) {
     <>
       <Row className=" justify-content-center">
         <Col>
-          <InputGroup className="mb-3">
+          <InputGroup className="mb-3 w-50 mx-auto">
             <Button size="sm" variant="outline-secondary" id="btn-resta" onClick={() => count > inicia && setCount(count - 1)}>
               -
             </Button>
@@ -25,7 +25,7 @@ function ItemCount({ stock, inicia, onAdd }) {
               +
             </Button>
           </InputGroup>
-          <Button className={inactivo} size="sm" variant="outline-secondary" id="btn-agregar" onClick={() => onAdd(count)}>
+          <Button className={inactivo} size="md" variant="outline-secondary" id="btn-agregar" onClick={() => onAdd(count)}>
             {textoBtnAgregarProd}
           </Button>
         </Col>
