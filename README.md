@@ -1,4 +1,4 @@
-![](/imagenes/repository.png)
+![](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/repository.png?raw=true)
 
 # TU SALDO VA
 
