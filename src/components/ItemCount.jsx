@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, InputGroup, FormControl, Col, Row } from "react-bootstrap";
 
-function ItemCount({ stock, inicia, onAdd }) {
+function ItemCount({ stock, inicia }) {
   let inactivo;
   let textoBtnAgregarProd = "Agregar al carrito";
   if (stock <= 0) {
@@ -11,12 +11,13 @@ function ItemCount({ stock, inicia, onAdd }) {
   }
 
   const [count, setCount] = useState(+inicia);
+  const onAdd = (cantidad) => alert("Agregaste " + cantidad + " plan(es) al carrito.");
 
   return (
     <>
-      <Row className=" justify-content-center">
-        <Col>
-          <InputGroup className="mb-3 w-50 mx-auto">
+      <Row className=" justify-content-center px-2">
+        <Col xs={5} className="px-1">
+          <InputGroup className="w-100 mx-auto">
             <Button size="sm" variant="outline-secondary" id="btn-resta" onClick={() => count > inicia && setCount(count - 1)}>
               -
             </Button>
@@ -25,7 +26,9 @@ function ItemCount({ stock, inicia, onAdd }) {
               +
             </Button>
           </InputGroup>
-          <Button className={inactivo} size="md" variant="outline-secondary" id="btn-agregar" onClick={() => onAdd(count)}>
+        </Col>
+        <Col className="px-1">
+          <Button className={`${inactivo} w-100 `} size="sm" variant="outline-secondary" id="btn-agregar" onClick={() => onAdd(count)}>
             {textoBtnAgregarProd}
           </Button>
         </Col>

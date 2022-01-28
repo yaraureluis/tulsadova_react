@@ -1,23 +1,31 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
+import { Card, Col, Button } from "react-bootstrap";
 import ItemCount from "./ItemCount.jsx";
+import { Link } from "react-router-dom";
 
-export default function Item({ id, title, precio, pictureUrl, stock }) {
-  const onAdd = (cantidad) => alert("Se agregaron " + cantidad + " items al carrito.");
+export default function Item({ prop }) {
+  const onAdd = (cantidad) => alert("Agregaste " + cantidad + " plan(es) al carrito.");
   return (
     <>
       <Col>
         <Card sm="4" className="text-center">
-          <Card.Img variant="top" src={pictureUrl} id={id} style={{ maxHeight: "35px" }} className="mt-3" />
+          <Link to={`/operadora/${prop.id_operadora}`}>
+            <Card.Img variant="top" src={prop.logo} style={{ maxHeight: "35px" }} className="mt-3" />
+          </Link>
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
+            <Card.Title>{prop.operadora}</Card.Title>
             <Card.Text>
-              <strong>Precio:</strong> {precio}Ars.
+              <strong>Precio:</strong> {prop.min_pesos} Ars.
             </Card.Text>
             <Card.Text>
-              <strong>Stock:</strong> {stock}
+              <strong>Stock:</strong> {prop.stock}
             </Card.Text>
-            <ItemCount stock={stock} inicia="1" onAdd={onAdd} />
+            <ItemCount stock={prop.stock} inicia="1" />
+            <Link to={`/operadora/${prop.id_operadora}`}>
+              <Button size="sm" variant="outline-primary" className="mt-2 w-100">
+                Ver más planes {prop.operadora}
+              </Button>
+            </Link>
           </Card.Body>
         </Card>
       </Col>

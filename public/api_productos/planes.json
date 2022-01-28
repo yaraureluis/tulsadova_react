@@ -1,9 +1,10 @@
 [
   {
     "id": 1,
+    "id_operadora": "digitel",
     "operadora": "Digitel",
     "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/digitel.svg",
-    "imagen": "./imagenes/planes_muestra.jpg",
+    "imagen": "/imagenes/planes_digitel.jpg",
     "categoria": "telefonia",
     "stock": 10,
     "min_pesos": 300,
@@ -17,9 +18,10 @@
   },
   {
     "id": 2,
+    "id_operadora": "movistar",
     "operadora": "Movistar",
     "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/movistar.svg",
-    "imagen": "./imagenes/planes_muestra.jpg",
+    "imagen": "/imagenes/planes_movistar.jpg",
     "categoria": "telefonia",
     "stock": 10,
     "min_pesos": 250,
@@ -33,11 +35,12 @@
   },
   {
     "id": 3,
+    "id_operadora": "movilnet",
     "operadora": "Movilnet",
     "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/movilnet.svg",
-    "imagen": "./imagenes/planes_muestra.jpg",
+    "imagen": "/imagenes/planes_movilnet.jpg",
     "categoria": "telefonia",
-    "stock": 10,
+    "stock": 0,
     "min_pesos": 250,
     "max_pesos": 30000,
     "planes": [
@@ -49,9 +52,10 @@
   },
   {
     "id": 4,
+    "id_operadora": "inter",
     "operadora": "Inter",
     "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/inter.svg",
-    "imagen": "./imagenes/planes_muestra.jpg",
+    "imagen": "/imagenes/planes_inter.jpg",
     "categoria": "television",
     "stock": 10,
     "min_pesos": 300,
@@ -59,31 +63,33 @@
     "planes": [
       { "plan": "Bronce", "color": "Bronce", "precio_pesos": 300, "precio_bs": 5 },
       { "plan": "Plata", "color": "Plata", "precio_pesos": 600, "precio_bs": 10 },
-      { "plan": "Oro", "color": "Oro", "precio_pesos": 1150, "precio_bs": 15 },
-      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 1400, "precio_bs": 20 }
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 1150, "precio_bs": 20 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 1400, "precio_bs": 25 }
     ]
   },
   {
     "id": 5,
+    "id_operadora": "simple_tv",
     "operadora": "Simple TV",
     "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/simple_tv.svg",
-    "imagen": "./imagenes/planes_muestra.jpg",
+    "imagen": "/imagenes/planes_simpletv.jpg",
     "categoria": "television",
-    "stock": 10,
+    "stock": 7,
     "min_pesos": 300,
     "max_pesos": "consultar factura",
     "planes": [
       { "plan": "Bronce", "color": "Bronce", "precio_pesos": 300, "precio_bs": 5 },
       { "plan": "Plata", "color": "Plata", "precio_pesos": 600, "precio_bs": 10 },
-      { "plan": "Oro", "color": "Oro", "precio_pesos": 1150, "precio_bs": 15 },
-      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 1400, "precio_bs": 20 }
+      { "plan": "Oro", "color": "Oro", "precio_pesos": 1150, "precio_bs": 20 },
+      { "plan": "Diamante", "color": "Diamante", "precio_pesos": 1400, "precio_bs": 25 }
     ]
   },
   {
     "id": 6,
+    "id_operadora": "movistar_tv",
     "operadora": "Movistar TV",
     "logo": "https://raw.githubusercontent.com/yaraureluis/tusaldoVA/c7dafb7e8bb483e5589dd829706238aa9dc979a9/assets/imagenes/movistar_tv.svg",
-    "imagen": "./imagenes/planes_muestra.jpg",
+    "imagen": "/imagenes/planes_movistartv.jpg",
     "categoria": "television",
     "stock": 10,
     "min_pesos": 250,

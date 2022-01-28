@@ -2,39 +2,43 @@ import React from "react";
 import { Row, Col, Figure, Card, Button, ListGroup } from "react-bootstrap";
 import ItemCount from "./ItemCount.jsx";
 
-export default function ItemDetail({ operadora, logo, imagen, min, max, planes, tipo, stock }) {
-  const onAdd = (cantidad) => alert("Se agregaron " + cantidad + " items al carrito.");
+export default function ItemDetail({ prop }) {
   return (
     <>
-      <h1>Planes Telefonía</h1>
+      <h1>Planes {prop.operadora}</h1>
       <Row>
         <Col sm={6} lg={8}>
           <Figure>
-            <Figure.Image width="100%" alt="171x180" src={imagen} />
-            <Figure.Caption>Planes {operadora} Vigentes desde el 20/01/2022</Figure.Caption>
+            <Figure.Image width="100%" alt="171x180" src={prop.imagen} />
+            <Figure.Caption>Planes {prop.operadora} vigentes desde el 20/01/2022</Figure.Caption>
           </Figure>
         </Col>
         <Col sm={6} lg={4}>
           <Card style={{ width: "100%" }}>
             <Card.Body>
-              <img src={logo} height={"50px"} />
               <Card.Text>
-                <strong>Tipo de servicio:</strong> {tipo}
+                <img src={prop.logo} height={"50px"} />
               </Card.Text>
               <Card.Text>
-                <strong>Recarga mínima:</strong> {min}Ars.
+                <strong>Tipo de servicio:</strong> {prop.categoria}
               </Card.Text>
               <Card.Text>
-                <strong>Recarga máxima:</strong> {max}Ars.
+                <strong>Recarga mínima:</strong> {prop.min_pesos}Ars.
+              </Card.Text>
+              <Card.Text>
+                <strong>Recarga máxima:</strong> {prop.max_pesos}Ars.
               </Card.Text>
 
               <Card.Text>
-                <h4>PLANES DISPONIBLES</h4>
-                <ListGroup defaultActiveKey="">
-                  {planes.map((plan) => {
+                <h4>PRECIOS</h4>
+                <ListGroup>
+                  {prop.planes.map((plan) => {
                     return (
-                      <ListGroup.Item action href={`#${plan.plan}`}>
-                        <strong>{plan.plan}: </strong> envía {plan.precio_pesos}Ars, recibe {plan.precio_bs}Bs.
+                      <ListGroup.Item action>
+                        <strong>
+                          Plan {plan.plan}:<span className="text-primary"> {plan.precio_pesos}Ars</span>
+                        </strong>
+                        → Recibe {plan.precio_bs}Bs.
                       </ListGroup.Item>
                     );
                   })}
@@ -45,10 +49,10 @@ export default function ItemDetail({ operadora, logo, imagen, min, max, planes, 
               </Card.Text>
               <Card.Text style={{ textAlign: "justify" }}>
                 <strong>Stock disponible: </strong>
-                {stock}
+                {prop.stock}
               </Card.Text>
               <div className="d-grid gap-2, text-center">
-                <ItemCount stock={stock} inicia="1" onAdd={onAdd} />
+                <ItemCount stock={prop.stock} inicia="1" />
                 <Button variant="primary" className="mt-3 ">
                   Comprar ahora
                 </Button>
