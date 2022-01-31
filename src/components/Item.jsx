@@ -1,10 +1,8 @@
 import React from "react";
 import { Card, Col, Button } from "react-bootstrap";
-import ItemCount from "./ItemCount.jsx";
 import { Link } from "react-router-dom";
 
 export default function Item({ prop }) {
-  const onAdd = (cantidad) => alert("Agregaste " + cantidad + " plan(es) al carrito.");
   return (
     <>
       <Col>
@@ -20,7 +18,6 @@ export default function Item({ prop }) {
             <Card.Text>
               <strong>Stock:</strong> {prop.stock}
             </Card.Text>
-            <ItemCount stock={prop.stock} inicia="1" />
             <Link to={`/operadora/${prop.id_operadora}`}>
               <Button size="sm" variant="outline-primary" className="mt-2 w-100">
                 Ver más planes {prop.operadora}

@@ -29,7 +29,7 @@ function App() {
             Seccion Preguntas
           </Route>
           <Route exact path="/carrito">
-            Carrito vacio
+            Carrito de prueba
           </Route>
         </Switch>
       </BrowserRouter>

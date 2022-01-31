@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, InputGroup, FormControl, Col, Row } from "react-bootstrap";
 
-function ItemCount({ stock, inicia }) {
+function ItemCount({ stock, inicia, onAdd }) {
   let inactivo;
   let textoBtnAgregarProd = "Agregar al carrito";
   if (stock <= 0) {
@@ -11,7 +11,6 @@ function ItemCount({ stock, inicia }) {
   }
 
   const [count, setCount] = useState(+inicia);
-  const onAdd = (cantidad) => alert("Agregaste " + cantidad + " plan(es) al carrito.");
 
   return (
     <>

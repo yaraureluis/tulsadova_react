@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Figure, Card, Button, ListGroup } from "react-bootstrap";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import ItemCount from "./ItemCount.jsx";
 
 export default function ItemDetail({ prop }) {
+  const [verCount, setVerCount] = useState([true]);
+
+  const onAdd = (cantidad) => {
+    alert("Agregaste " + cantidad + " plan(es) al carrito.");
+    setVerCount(false);
+  };
+
   return (
     <>
       <h1>Planes {prop.operadora}</h1>
@@ -52,10 +60,15 @@ export default function ItemDetail({ prop }) {
                 {prop.stock}
               </Card.Text>
               <div className="d-grid gap-2, text-center">
-                <ItemCount stock={prop.stock} inicia="1" />
-                <Button variant="primary" className="mt-3 ">
-                  Comprar ahora
-                </Button>
+                {verCount ? (
+                  <ItemCount stock={prop.stock} inicia="1" onAdd={onAdd} />
+                ) : (
+                  <Link to="/carrito">
+                    <Button variant="primary" className="mt-3 w-100">
+                      Ir al carrito
+                    </Button>
+                  </Link>
+                )}
               </div>
             </Card.Body>
           </Card>
