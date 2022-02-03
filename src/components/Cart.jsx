@@ -18,6 +18,7 @@ function Cart() {
 
           <Row className=" my-3">
             <Col md={4}>
+              {/* ##############      VACIAR EL CARRITO ################ */}
               <Button onClick={() => setCart([])} variant="danger" size="sm">
                 Vaciar carrito
               </Button>

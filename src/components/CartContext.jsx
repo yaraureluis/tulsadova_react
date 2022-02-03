@@ -7,7 +7,7 @@ export function CartProvider({ children }) {
 
   const addToCart = (detalle, cantidad) => {
     if (isInCart(detalle.id_operadora)) {
-      // funcion agregar cantidad al carrito
+      // ### Agrego cantidad a cada item existente del carrito ###
       const indexItem = cart.findIndex((item) => item.detalles.id_operadora === detalle.id_operadora);
       cart[indexItem].cantidad = cart[indexItem].cantidad + cantidad;
       setCart([...cart]);
@@ -18,20 +18,16 @@ export function CartProvider({ children }) {
     }
   };
 
-  // función para quitar elementos del carrito
+  // ### Quito un item del carrito ###
   const deleteItem = (id_operadora) => {
     const cartUpdated = cart.filter((item) => item.detalles.id_operadora !== id_operadora);
     setCart(cartUpdated);
   };
-  // funcion para vaciar el carrito
-  const clearCart = () => setCart([]);
 
-  // funcion para verificar si el producto existe ####
+  // ### funcion para verificar si el producto existe ####
   const isInCart = (id_operadora) => {
     return cart.some((item) => item.detalles.id_operadora === id_operadora);
   };
-
-  // funcion para vaciar el carrito
 
   return <cartContext.Provider value={{ cart, addToCart, deleteItem, setCart }}>{children}</cartContext.Provider>;
 }
