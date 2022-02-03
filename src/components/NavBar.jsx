@@ -78,7 +78,7 @@ function NavBar() {
             </Nav>
             <Nav>
               <Nav.Link>
-                <NavLink activeClassName="linkActivo" className="linkPropio" to="/carrito">
+                <NavLink activeClassName="linkActivo" className="linkPropio" to="/cart">
                   <CartWidget />
                 </NavLink>
               </Nav.Link>
