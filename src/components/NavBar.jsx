@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
+import { cartContext } from "./CartContext";
 
 function NavBar() {
+  const { cart } = useContext(cartContext);
+  useEffect(() => [cart]);
+
   return (
     <>
       <Navbar style={{ backgroundColor: "#16254f" }} expand="lg" variant={"dark"}>
@@ -79,7 +83,7 @@ function NavBar() {
             <Nav>
               <Nav.Link>
                 <NavLink activeClassName="linkActivo" className="linkPropio" to="/cart">
-                  <CartWidget />
+                  {cart.length > 0 && <CartWidget />}
                 </NavLink>
               </Nav.Link>
             </Nav>

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row, Col, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import { cartContext } from "./CartContext";
 import CartItem from "./CartItem";
 
 function Cart() {
-  const { cart, setCart } = useContext(cartContext);
+  const { cart, clearCart, totalPrice } = useContext(cartContext);
   return (
     <>
       {cart.length ? (
@@ -15,23 +15,32 @@ function Cart() {
           {cart.map((item) => (
             <CartItem key={item.detalles.id_operadora} producto={item} />
           ))}
-
-          <Row className=" my-3">
-            <Col md={4}>
+          {/* ##### TOTAL DE LA COMPRA ###### */}
+          <Alert variant="success">
+            <Row>
+              <Col xs="12" sm="8">
+                <Alert.Heading>Total planes: {totalPrice()}Ars.</Alert.Heading>
+              </Col>
+              <Col xs="12" sm="4" className="d-flex justify-content-sm-end">
+                <Button className="" variant="success" size="sm" onClick={() => alert("Compra exitosa!")}>
+                  Realizar compra
+                </Button>
+              </Col>
+            </Row>
+          </Alert>
+          <Row className=" my-3 justify-content-end">
+            <Col xs="12" md="3" className="px-1">
               {/* ##############      VACIAR EL CARRITO ################ */}
-              <Button onClick={() => setCart([])} variant="danger" size="sm">
+              <Button onClick={() => clearCart()} variant="outline-primary" size="sm" className="w-100">
                 Vaciar carrito
               </Button>
             </Col>
-            <Col md={{ span: 4, offset: 4 }}>
+            <Col xs="12" md="3" className="px-1">
               <Link to="/">
-                <Button variant="primary" size="sm">
+                <Button variant="outline-primary" size="sm" className="w-100">
                   Seleccionar más planes
                 </Button>
-              </Link>{" "}
-              <Button variant="success" size="sm" onClick={() => alert("Compra exitosa!")}>
-                Realizar compra
-              </Button>{" "}
+              </Link>
             </Col>
           </Row>
         </Container>

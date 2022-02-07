@@ -10,7 +10,7 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
       <Row>
         <Col sm={6} lg={8}>
           <Figure>
-            <Figure.Image width="100%" alt="171x180" src={prop.imagen} />
+            <Figure.Image width="100%" alt={`logo ${prop.operadora}`} src={prop.imagen} />
             <Figure.Caption>Planes {prop.operadora} vigentes desde el 20/01/2022</Figure.Caption>
           </Figure>
         </Col>
@@ -18,7 +18,7 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
           <Card style={{ width: "100%" }}>
             <Card.Body>
               <Card.Text>
-                <img src={prop.logo} height={"50px"} />
+                <img src={prop.logo} height={"50px"} alt={`logo ${prop.operadora}`} />
               </Card.Text>
               <Card.Text>
                 <strong>Tipo de servicio:</strong> {prop.categoria}
@@ -65,10 +65,10 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
               </div>
             </Card.Body>
           </Card>
-          <Card style={{ width: "100%", marginTop: "15px" }}>
+          <Card style={{ width: "100%", marginTop: "12px" }}>
             <Card.Body>
-              <h6>IMPORTANTE</h6>
               <Card.Text style={{ fontSize: "12px", textAlign: "justify" }}>
+                <strong>VERSIÓN BETA, SOLO DIPONIBLE PLAN BRONCE.</strong> <hr className="mb-1 mt-0" />
                 Su recarga será procesada de forma automática al realizar el pago, recibirá un comprobante de recarga con un código generado por la operadora. Si tiene dudas pudede acceder a nuestra sección <a href="#preguntas"> preguntas frecuentes.</a>
               </Card.Text>
             </Card.Body>

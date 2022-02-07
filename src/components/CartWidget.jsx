@@ -1,14 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import { cartContext } from "./CartContext";
 
 function CartWidget() {
-  const { cart } = useContext(cartContext);
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  const { totalProducts } = useContext(cartContext);
 
-  return <span className="bi bi-cart-fill"> ({cart.length}) Ver carrito</span>;
+  return <span className="bi bi-cart-fill"> ({totalProducts()}) Ver carrito</span>;
 }
 
 export default CartWidget;
