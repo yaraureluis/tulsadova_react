@@ -3,33 +3,42 @@ import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import Loading from "./Loading";
+import { getFirestore } from "../firebase/firebase";
 
 function ItemListContainer() {
   const { id_categoria } = useParams();
   const [prod, setProd] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const promesaProductos = new Promise((resolve, reject) => {
-      fetch("/api_productos/planes.json")
-        .then((response) => response.json())
-        .then(function (res) {
-          resolve(res);
-        });
-    });
+    setLoading(true);
+    const db = getFirestore();
+    let itemCollection;
+    if (id_categoria) itemCollection = db.collection("items").where("categoria", "==", id_categoria);
+    else itemCollection = db.collection("items").orderBy("categoria", "asc");
 
-    promesaProductos.then((res) => {
-      if (id_categoria) res = res.filter((ele) => ele.categoria === id_categoria);
-      console.log(res);
-      console.log(promesaProductos);
-      setProd(res);
-    });
-    promesaProductos.catch((err) => {
-      setProd(err);
-    });
+    itemCollection
+      .get()
+      .then((querySnapshot) => {
+        if (querySnapshot.size === 0) {
+          console.log("No hay items");
+          return;
+        }
+        setProd(
+          querySnapshot.docs.map((doc) => {
+            return { doc_id: doc.id, ...doc.data() };
+          })
+        );
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [id_categoria]);
+
   return (
     <>
-      {prod.length ? (
+      {prod.length || !loading ? (
         <Container fluid="md">
           <ItemList items={prod} />
         </Container>

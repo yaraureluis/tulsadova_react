@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
@@ -6,7 +6,6 @@ import { cartContext } from "./CartContext";
 
 function NavBar() {
   const { cart } = useContext(cartContext);
-  useEffect(() => [cart]);
 
   return (
     <>
