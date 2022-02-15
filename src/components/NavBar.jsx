@@ -36,7 +36,7 @@ function NavBar() {
                   </NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <NavLink activeClassName="linkActivo" className="linkPropio" exact to="/">
+                  <NavLink activeClassName="linkActivo" className="linkPropio" exact to="/planes">
                     Ver todos
                   </NavLink>
                 </NavDropdown.Item>

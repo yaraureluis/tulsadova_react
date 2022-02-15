@@ -4,11 +4,11 @@ import { Col, Row, Card, Button } from "react-bootstrap";
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 export default function CartItem({ producto }) {
-  const { deleteItem } = useContext(cartContext);
+  const { deleteItem, clearCart } = useContext(cartContext);
 
   return (
     <>
-      <Card className="my-2 py-2">
+      <Card className="border-light mb-2 py-2">
         <Row className="px-2">
           <Col sm={4} style={{ display: "flex", alignItems: "center" }}>
             <Card.Img variant="top" src={producto.detalles.logo} alt={`Imagen ${producto.detalles.operadora}`} style={{ maxHeight: "40px" }} />

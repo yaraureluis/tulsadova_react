@@ -16,6 +16,7 @@ export default function ItemDetailContainer() {
   useEffect(() => {
     let montado = true;
     setVerCount(true);
+    setPromesaCumplida(false);
 
     const db = getFirestore();
     let itemRef = db.collection("items").doc(id_operadora);
@@ -48,7 +49,7 @@ export default function ItemDetailContainer() {
 
   return (
     <>
-      {detalle && promesaCumplida ? (
+      {promesaCumplida ? (
         <Container fluid="md">
           <ItemDetail prop={detalle} onAdd={onAdd} ocultarContador={verCount} />
         </Container>

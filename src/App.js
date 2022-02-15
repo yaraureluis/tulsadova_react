@@ -5,9 +5,13 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import Contacto from "./components/Contacto";
 import Cart from "./components/Cart";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
+import CheckOut from "./components/CheckOut";
+import CarouselSection from "./components/CarouselSection";
+import Spacer from "./components/Spacer";
 
 function App() {
   return (
@@ -17,6 +21,8 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/">
+              <CarouselSection />
+              <Spacer texto="PLANES DISPONIBLES" />
               <ItemListContainer />
             </Route>
             <Route path="/categoria/:id_categoria">
@@ -25,11 +31,14 @@ function App() {
             <Route path="/operadora/:id_operadora">
               <ItemDetailContainer />
             </Route>
+            <Route exact path="/planes">
+              <ItemListContainer />
+            </Route>
             <Route exact path="/contacto">
-              Contactos
+              <Contacto />
             </Route>
             <Route exact path="/preguntas">
-              Seccion Preguntas
+              <CheckOut />
             </Route>
             <Route exact path="/cart">
               <Cart />
