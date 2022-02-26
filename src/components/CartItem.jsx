@@ -4,7 +4,7 @@ import { Col, Row, Card, Button } from "react-bootstrap";
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 export default function CartItem({ producto }) {
-  const { deleteItem, clearCart } = useContext(cartContext);
+  const { deleteItem } = useContext(cartContext);
 
   return (
     <>

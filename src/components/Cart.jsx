@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react";
-import { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Container, Row, Col, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
@@ -30,7 +29,7 @@ function Cart() {
                     Vaciar carrito
                   </Button>
 
-                  <Link to="/">
+                  <Link to="/categoria/todas">
                     <Button variant="outline-primary" size="sm" className="m-1">
                       Seleccionar más planes
                     </Button>

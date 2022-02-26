@@ -9,7 +9,7 @@ function NavBar() {
 
   return (
     <>
-      <Navbar style={{ backgroundColor: "#16254f" }} expand="lg" variant={"dark"}>
+      <Navbar style={{ backgroundColor: "#16254f", borderBottom: "3px solid orange" }} expand="lg" variant={"dark"}>
         <Container>
           <Navbar.Brand>
             <NavLink activeClassName="linkActivo" className="linkPropio" to="/">
@@ -36,8 +36,8 @@ function NavBar() {
                   </NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <NavLink activeClassName="linkActivo" className="linkPropio" exact to="/planes">
-                    Ver todos
+                  <NavLink activeClassName="linkActivo" className="linkPropio" exact to="/categoria/todas">
+                    Ver todas
                   </NavLink>
                 </NavDropdown.Item>
               </NavDropdown>
@@ -81,7 +81,7 @@ function NavBar() {
             </Nav>
             <Nav>
               <Nav.Link>
-                <NavLink activeClassName="linkActivo" className="linkPropio" to="/cart">
+                <NavLink activeClassName="linkActivo" className="linkPropio" to="/carrito">
                   {cart.length > 0 && <CartWidget />}
                 </NavLink>
               </Nav.Link>

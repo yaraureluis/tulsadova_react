@@ -2,16 +2,16 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import Contacto from "./components/Contacto";
+import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
-import CheckOut from "./components/CheckOut";
+import Questions from "./components/Questions";
 import CarouselSection from "./components/CarouselSection";
 import Spacer from "./components/Spacer";
+import PaymentMethods from "./components/PaymentMethods";
 
 function App() {
   return (
@@ -22,25 +22,26 @@ function App() {
           <Switch>
             <Route exact path="/">
               <CarouselSection />
-              <Spacer texto="PLANES DISPONIBLES" />
+              <Spacer texto="¿Qué puedes recargar?" />
               <ItemListContainer />
+              <Spacer texto="¿Cómo puedo pagar?" />
+              <PaymentMethods />
             </Route>
             <Route path="/categoria/:id_categoria">
+              <Spacer texto="Planes Disponibles" />
               <ItemListContainer />
             </Route>
             <Route path="/operadora/:id_operadora">
               <ItemDetailContainer />
             </Route>
-            <Route exact path="/planes">
-              <ItemListContainer />
-            </Route>
             <Route exact path="/contacto">
-              <Contacto />
+              <Contact />
             </Route>
             <Route exact path="/preguntas">
-              <CheckOut />
+              <Spacer texto="Preguntas Frecuentes" />
+              <Questions />
             </Route>
-            <Route exact path="/cart">
+            <Route exact path="/carrito">
               <Cart />
             </Route>
           </Switch>

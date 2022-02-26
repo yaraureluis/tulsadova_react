@@ -33,9 +33,9 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
               <Card.Text>
                 <h4>PRECIOS</h4>
                 <ListGroup>
-                  {prop.planes.map((plan) => {
+                  {prop.planes.map((plan, i) => {
                     return (
-                      <ListGroup.Item action>
+                      <ListGroup.Item action key={i}>
                         <strong>
                           Plan {plan.plan}:<span className="text-primary"> {plan.precio_pesos}Ars</span>
                         </strong>
@@ -56,7 +56,7 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
                 {ocultarContador ? (
                   <ItemCount stock={prop.stock} inicia="1" onAdd={onAdd} />
                 ) : (
-                  <Link to="/cart">
+                  <Link to="/carrito">
                     <Button variant="primary" className="mt-3 w-100">
                       Ir al carrito
                     </Button>

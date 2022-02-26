@@ -14,7 +14,7 @@ function ItemListContainer() {
     setLoading(true);
     const db = getFirestore();
     let itemCollection;
-    if (id_categoria) itemCollection = db.collection("items").where("categoria", "==", id_categoria);
+    if (id_categoria && id_categoria !== "todas") itemCollection = db.collection("items").where("categoria", "==", id_categoria);
     else itemCollection = db.collection("items").orderBy("categoria", "asc");
 
     itemCollection
