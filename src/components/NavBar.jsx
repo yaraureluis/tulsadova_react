@@ -19,11 +19,9 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>
-                <NavLink activeClassName="linkActivo" className="linkPropio" to="/preguntas">
-                  Preguntas Frecuentes
-                </NavLink>
-              </Nav.Link>
+              <NavLink activeClassName="linkActivo" className="linkPropio paddingNav" to="/preguntas">
+                Preguntas Frecuentes
+              </NavLink>
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
                 <NavDropdown.Item>
                   <NavLink activeClassName="linkActivo" className="linkPropio" to="/categoria/telefonia">
@@ -73,18 +71,14 @@ function NavBar() {
                   </NavLink>
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link>
-                <NavLink activeClassName="linkActivo" className="linkPropio" to="/contacto">
-                  Contacto
-                </NavLink>
-              </Nav.Link>
+              <NavLink activeClassName="linkActivo" className="linkPropio paddingNav" to="/contacto">
+                Contacto
+              </NavLink>
             </Nav>
             <Nav>
-              <Nav.Link>
-                <NavLink activeClassName="linkActivo" className="linkPropio" to="/carrito">
-                  {cart.length > 0 && <CartWidget />}
-                </NavLink>
-              </Nav.Link>
+              <NavLink activeClassName="linkActivo" className="linkPropio paddingNav" to="/carrito">
+                {cart.length > 0 && <CartWidget />}
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

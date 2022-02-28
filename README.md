@@ -2,12 +2,33 @@
 
 # TU SALDO VA
 
+Hola a todos, les presento los avances de mi primer proyecto con react: **TU SALDO VA.**
+
+Tu Saldo VA es una app creada como herramienta para la recarga de saldo y pago de servicios de televisión y telefonía. Con un público muy específico, venezolanos residentes en Argentina.
+
+El objetivo es que el usuario acceda a una oferta de planes, seleccione uno o más y finalice la experiencia generando una orden que se procesa de forma externa. Asimismo puede hacer seguimiento a la misma a través de whatsapp.
+
 ---
 
-Mi primer repositorio donde muestro un proyecto hecho con React js, utilizando react-boostrap para darle estilos.
+## Tecnologías
 
-El objetivo es crear una página donde el usuario pueda hacer recargas telefónicas y pagar servicios de tv de Venezuela, desde Argentina.
+Para inicializar la app debes utilzar el comando npm start. En el desarrollo de la app se utilizaron las siguientes tecnoligías:
 
-La oferta se centra en planes para el usuario, con diferentes montos, los mismos cambian por operadora.
+- React 17.0.2
+- React-boostrap 2.1.0
+- Boostrap 5.1.3
+- Boostrap icons 1.7.2
+- React router dom 5.2.0"
+- La base de datos utilizada es Firebase 8.8.0
 
-IMPORTANTE: es un proyecto en desarrollo, que está basado en los requerimientos del curso React js de CODERHOUSE
+---
+
+## Autor
+
+Ing. Luis Alexander Yaraure Cossi, estudiante de la Carrera Desarrollo Full Stack en CODERHOUSE.
+
+https://github.com/yaraureluis
+
+---
+
+**IMPORTANTE:** _este es un proyecto en desarrollo, que está basado en los **requerimientos del Curso React Js de CODERHOUSE.** Debido a ésto el total de funcionalidades (como la categorización de los planes: Diamante, Oro, Plata, Bronce) serán agregadas posteriormente para entregar al cliente final._

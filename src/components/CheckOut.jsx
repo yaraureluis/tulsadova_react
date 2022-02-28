@@ -9,14 +9,20 @@ function CheckOut() {
   const { cart, totalPrice } = useContext(cartContext);
   const [userInfo, setUserInfo] = useState({});
   const [orderId, setOrderId] = useState();
-
   const [show, setShow] = useState(false);
 
+  // Funciones asociadas al modal
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // Funcion asociada al botón finalizar compra
+  const sendingOrder = () => {
+    let btn_finalizar = document.getElementById("btn_finalizar");
+    btn_finalizar.disabled = true;
+    btn_finalizar.innerHTML = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>`;
+  };
+
   const handleChange = (e) => {
-    console.log(e);
     setUserInfo({
       ...userInfo,
       [e.target.name]: e.target.value,
@@ -24,6 +30,7 @@ function CheckOut() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    sendingOrder();
 
     const db = getFirestore();
     const ordersRef = db.collection("orders");
@@ -53,7 +60,6 @@ function CheckOut() {
         .commit()
         .then(() => {
           ordersRef.add({ ...userInfo, cart, total, date }).then(({ id }) => {
-            console.log("id del documento", id);
             setOrderId(id);
             e.target.reset();
             setShow(true);

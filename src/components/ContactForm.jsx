@@ -1,6 +1,7 @@
 import React from "react";
+import ContactModal from "./ContactModal";
 
-const ContactForm = ({ handleSubmit, handleReset, handleChange, contactSent }) => {
+function ContactForm({ handleSubmit, handleReset, handleChange, contactSent, show }) {
   return (
     <>
       <section className="container">
@@ -35,24 +36,24 @@ const ContactForm = ({ handleSubmit, handleReset, handleChange, contactSent }) =
               </label>
               <textarea rows="6" cols="40" onChange={handleChange} name="caja" className="form-control mb-2"></textarea>
               <div>
-                <input type="reset" onClick={handleReset} className="btn btn-outline-danger me-1" value="Reset" />
-                <input type="submit" className="btn btn-outline-primary ms-1" value="Enviar" />
+                <button type="reset" onClick={handleReset} className="btn btn-outline-danger me-1">
+                  Reset
+                </button>
+                <button type="submit" className="btn btn-outline-primary ms-1" id="btn_enviar">
+                  Enviar
+                </button>
               </div>
             </form>
-
-            {contactSent && (
-              <div>
-                <p>Su consulta ha sido enviada, será contactado en breve...¡Gracias!</p>
-              </div>
-            )}
           </div>
           <div className="col-md-6">
             <img src="https://yaraureluis.github.io/tusaldoVA/assets/imagenes/abrazo.jpg" alt="Personas abrazadas emotivamente" width="100%" />
           </div>
         </div>
+
+        {contactSent && <ContactModal show={show} />}
       </section>
     </>
   );
-};
+}
 
 export default ContactForm;

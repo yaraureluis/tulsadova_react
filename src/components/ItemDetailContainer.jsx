@@ -6,7 +6,7 @@ import Loading from "./Loading";
 import { cartContext } from "./CartContext";
 import { getFirestore } from "../firebase/firebase";
 
-export default function ItemDetailContainer() {
+function ItemDetailContainer() {
   const { addToCart } = useContext(cartContext);
   const { id_operadora } = useParams();
   const [detalle, setDetalle] = useState({});
@@ -24,7 +24,6 @@ export default function ItemDetailContainer() {
       .get()
       .then((doc) => {
         if (!doc.exists) {
-          console.log("No existen datos de la operadora seleccionada");
           return;
         }
 
@@ -53,3 +52,4 @@ export default function ItemDetailContainer() {
     </>
   );
 }
+export default ItemDetailContainer;

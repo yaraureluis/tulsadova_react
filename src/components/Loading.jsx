@@ -1,6 +1,7 @@
 import React from "react";
 import { Spinner, Container } from "react-bootstrap";
-export default function Loading() {
+
+function Loading() {
   return (
     <>
       <Container className="text-center" style={{ height: "80vh", display: "flex", alignItems: "center" }}>
@@ -12,3 +13,4 @@ export default function Loading() {
     </>
   );
 }
+export default Loading;

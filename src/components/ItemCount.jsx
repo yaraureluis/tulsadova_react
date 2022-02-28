@@ -3,7 +3,7 @@ import { Button, InputGroup, FormControl, Col, Row } from "react-bootstrap";
 
 function ItemCount({ stock, inicia, onAdd }) {
   let inactivo;
-  let textoBtnAgregarProd = "Agregar al carrito";
+  let textoBtnAgregarProd = " Agregar al carrito";
   if (stock <= 0) {
     inicia = 0;
     inactivo = "disabled";
@@ -27,7 +27,7 @@ function ItemCount({ stock, inicia, onAdd }) {
           </InputGroup>
         </Col>
         <Col className="px-1">
-          <Button className={`${inactivo} w-100 `} size="sm" variant="outline-secondary" id="btn-agregar" onClick={() => onAdd(count)}>
+          <Button className={`${inactivo} w-100 bi bi-cart-plus-fill`} size="sm" variant="outline-secondary" id="btn-agregar" onClick={() => onAdd(count)}>
             {textoBtnAgregarProd}
           </Button>
         </Col>

@@ -24,19 +24,16 @@ function Cart() {
                   ))}
                 </Col>
                 <Col className="text-center text-md-end mb-2">
-                  {/* ##############      VACIAR EL CARRITO ################ */}
                   <Button onClick={() => clearCart()} variant="outline-primary" size="sm" className="m-1">
-                    Vaciar carrito
+                    <span className="bi bi-cart-x"> Vaciar carrito</span>
                   </Button>
-
                   <Link to="/categoria/todas">
                     <Button variant="outline-primary" size="sm" className="m-1">
-                      Seleccionar más planes
+                      <span className="bi bi-cart-plus-fill"> Seleccionar más planes</span>
                     </Button>
                   </Link>
                 </Col>
               </Row>
-              {/* ##### TOTAL DE LA COMPRA ###### */}
               <Col>
                 <Alert variant="success">
                   <Row>
@@ -46,7 +43,7 @@ function Cart() {
                     <Col xs="12" sm="4" className="text-center text-md-end">
                       {!checkOut && (
                         <Button className="" variant="success" size="sm" onClick={() => setCheckOut(true)}>
-                          Confirmar pedido
+                          <span className="bi bi-check-circle"> Confirmar pedido</span>
                         </Button>
                       )}
                     </Col>
@@ -63,11 +60,11 @@ function Cart() {
           </Row>
         </Container>
       ) : (
-        <Container className="text-center  mt-4" style={{ height: "100vh" }}>
+        <Container className="text-center  mt-5" style={{ height: "55vh" }}>
           <h2>Carrito vacio</h2>
           <Link to="/">
             <Button size="sm" variant="warning">
-              Volver a comprar!
+              <span className="bi bi-house-fill"> Volver a comprar!</span>
             </Button>
           </Link>
         </Container>

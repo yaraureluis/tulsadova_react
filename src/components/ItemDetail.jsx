@@ -3,10 +3,10 @@ import { Row, Col, Figure, Card, Button, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import ItemCount from "./ItemCount.jsx";
 
-export default function ItemDetail({ prop, onAdd, ocultarContador }) {
+function ItemDetail({ prop, onAdd, ocultarContador }) {
   return (
     <>
-      <h1>Planes {prop.operadora}</h1>
+      <h2>Planes {prop.operadora}</h2>
       <Row>
         <Col sm={6} lg={8}>
           <Figure>
@@ -30,21 +30,20 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
                 <strong>Recarga máxima:</strong> {prop.max_pesos}Ars.
               </Card.Text>
 
-              <Card.Text>
-                <h4>PRECIOS</h4>
-                <ListGroup>
-                  {prop.planes.map((plan, i) => {
-                    return (
-                      <ListGroup.Item action key={i}>
-                        <strong>
-                          Plan {plan.plan}:<span className="text-primary"> {plan.precio_pesos}Ars</span>
-                        </strong>
-                        → Recibe {plan.precio_bs}Bs.
-                      </ListGroup.Item>
-                    );
-                  })}
-                </ListGroup>
-              </Card.Text>
+              <h4>PRECIOS</h4>
+              <ListGroup>
+                {prop.planes.map((plan, i) => {
+                  return (
+                    <ListGroup.Item action key={i}>
+                      <strong>
+                        Plan {plan.plan}:<span className="text-primary"> {plan.precio_pesos}Ars</span>
+                      </strong>
+                      → Recibe {plan.precio_bs}Bs.
+                    </ListGroup.Item>
+                  );
+                })}
+              </ListGroup>
+
               <Card.Text style={{ textAlign: "justify" }}>
                 Selecciona el plan que necesites, recuerda que el pago se realiza siempre en <strong>PESOS ARGENTINOS.</strong>
               </Card.Text>
@@ -58,7 +57,7 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
                 ) : (
                   <Link to="/carrito">
                     <Button variant="primary" className="mt-3 w-100">
-                      Ir al carrito
+                      <span className="bi bi-cart-fill"> Ir al carrito</span>
                     </Button>
                   </Link>
                 )}
@@ -67,9 +66,11 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
           </Card>
           <Card style={{ width: "100%", marginTop: "12px" }}>
             <Card.Body>
-              <Card.Text style={{ fontSize: "12px", textAlign: "justify" }}>
-                <strong>VERSIÓN BETA, SOLO DIPONIBLE PLAN BRONCE.</strong> <hr className="mb-1 mt-0" />
-                Su recarga será procesada de forma automática al realizar el pago, recibirá un comprobante de recarga con un código generado por la operadora. Si tiene dudas pudede acceder a nuestra sección <a href="#preguntas"> preguntas frecuentes.</a>
+              <Card.Text style={{ fontSize: "12px", textAlign: "justify", fontWeight: "bold" }} className="mb-1 pb-0">
+                VERSIÓN BETA, SOLO DIPONIBLE PLAN BRONCE.
+              </Card.Text>
+              <Card.Text style={{ fontSize: "12px", textAlign: "justify", borderTop: "solid 1px grey" }} className="mt-1 pt-0">
+                Su recarga será procesada de forma automática al realizar el pago, recibirá un comprobante de recarga con un código generado por la operadora. Si tiene dudas pudede acceder a nuestra sección preguntas frecuentes.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -78,3 +79,4 @@ export default function ItemDetail({ prop, onAdd, ocultarContador }) {
     </>
   );
 }
+export default ItemDetail;

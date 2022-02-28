@@ -21,7 +21,6 @@ function ItemListContainer() {
       .get()
       .then((querySnapshot) => {
         if (querySnapshot.size === 0) {
-          console.log("No hay items");
           return;
         }
         setProd(
@@ -39,9 +38,11 @@ function ItemListContainer() {
   return (
     <>
       {prod.length || !loading ? (
-        <Container fluid="md">
-          <ItemList items={prod} />
-        </Container>
+        <main>
+          <Container fluid="md">
+            <ItemList items={prod} />
+          </Container>
+        </main>
       ) : (
         <Loading />
       )}

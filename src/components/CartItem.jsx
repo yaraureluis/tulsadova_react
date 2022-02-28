@@ -3,7 +3,7 @@ import { cartContext } from "./CartContext";
 import { Col, Row, Card, Button } from "react-bootstrap";
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-export default function CartItem({ producto }) {
+function CartItem({ producto }) {
   const { deleteItem } = useContext(cartContext);
 
   return (
@@ -28,7 +28,7 @@ export default function CartItem({ producto }) {
                 <strong>Subtotal: ${producto.subtotal} </strong>
               </Card.Text>
               <Button variant="outline-danger" size="sm" onClick={() => deleteItem(producto.detalles.id_operadora)}>
-                <span className="bi bi-trash-fill"> Quitar del carrito</span>
+                <span className="bi bi-trash"> Quitar del carrito</span>
               </Button>
             </Card.Body>
           </Col>
@@ -37,3 +37,5 @@ export default function CartItem({ producto }) {
     </>
   );
 }
+
+export default CartItem;

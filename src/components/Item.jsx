@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export default function Item({ prop }) {
+function Item({ prop }) {
   return (
     <>
       <Col>
@@ -20,7 +20,7 @@ export default function Item({ prop }) {
             </Card.Text>
             <Link to={`/operadora/${prop.id_operadora}`}>
               <Button size="sm" variant="outline-primary" className="mt-2 w-100">
-                Ver más planes {prop.operadora}
+                <span className="bi bi-info-circle"> Ver más planes {prop.operadora}</span>
               </Button>
             </Link>
           </Card.Body>
@@ -29,3 +29,4 @@ export default function Item({ prop }) {
     </>
   );
 }
+export default Item;

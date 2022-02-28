@@ -1,5 +1,5 @@
 import React from "react";
-import MyModal from "./MyModal";
+import OrderModal from "./OrderModal";
 
 function CheckOutForm({ handleSubmit, handleChange, orderId, show, handleShow, handleClose }) {
   return (
@@ -26,13 +26,15 @@ function CheckOutForm({ handleSubmit, handleChange, orderId, show, handleShow, h
           </div>
           <div className="text-center">
             <hr />
-            <input type="submit" className="btn btn-success btn-sm w-100" value="FINALIZAR COMPRA" />
+            <button type="submit" id="btn_finalizar" className="btn btn-success btn-sm w-100">
+              FINALIZAR COMPRA
+            </button>
           </div>
         </form>
 
         {orderId && (
           <>
-            <MyModal handleClose={handleClose} handleShow={handleShow} show={show} orderId={orderId} />
+            <OrderModal handleClose={handleClose} handleShow={handleShow} show={show} orderId={orderId} />
           </>
         )}
       </section>

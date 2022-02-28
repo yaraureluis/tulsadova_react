@@ -9,9 +9,11 @@ import Cart from "./components/Cart";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
 import Questions from "./components/Questions";
+import Footer from "./components/Footer";
 import CarouselSection from "./components/CarouselSection";
 import Spacer from "./components/Spacer";
 import PaymentMethods from "./components/PaymentMethods";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
               <Cart />
             </Route>
           </Switch>
+          <WhatsAppButton />
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </>

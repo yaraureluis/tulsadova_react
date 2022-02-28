@@ -10,7 +10,7 @@ function PaymentMethods() {
             <p className="m-0 py-1 text-primary">Transferencia bancaria</p>
           </div>
           <div>
-            <iframe className="rounded" width="100%" height="400" src="https://www.youtube.com/embed/x2Sl0kvF95w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe className="rounded" width="100%" height="400" src="https://www.youtube.com/embed/x2Sl0kvF95w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </Col>
         <Col md={6}>
@@ -18,7 +18,7 @@ function PaymentMethods() {
             <p className="m-0 py-1 text-primary">Mercadopago</p>
           </div>
           <div>
-            <iframe className="rounded" width="100%" height="400" src="https://www.youtube.com/embed/o8F8nD3G4ro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe className="rounded" width="100%" height="400" src="https://www.youtube.com/embed/o8F8nD3G4ro" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </Col>
       </Row>
