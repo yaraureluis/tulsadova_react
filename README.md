@@ -6,7 +6,9 @@ Hola a todos, les presento los avances de mi primer proyecto con react: **TU SAL
 
 Tu Saldo VA es una app creada como herramienta para la recarga de saldo y pago de servicios de televisión y telefonía. Con un público muy específico, venezolanos residentes en Argentina.
 
-El objetivo es que el usuario acceda a una oferta de planes, seleccione uno o más y finalice la experiencia generando una orden que se procesa de forma externa. Asimismo puede hacer seguimiento a la misma a través de whatsapp.
+El objetivo es que el usuario acceda a una oferta de planes, seleccione uno o más y finalice la experiencia generando una orden que se procesa de forma externa.
+
+La app tiene la funcionabilida de descontar el stock de la base de datos al finalizar una compra, al mismo tiempo genera una orden y le muestra el usuario el código de seguimiento. (puede saber el estado de su compra o hablar con un asesor a través de whatsapp, con un botón que aparece al finalizar la compra) Si un producto no tiene stock no puede ser agregado al carrito.
 
 ---
 
@@ -32,3 +34,9 @@ https://github.com/yaraureluis
 ---
 
 **IMPORTANTE:** _este es un proyecto en desarrollo, que está basado en los **requerimientos del Curso React Js de CODERHOUSE.** Debido a ésto el total de funcionalidades (como la categorización de los planes: Diamante, Oro, Plata, Bronce) serán agregadas posteriormente para entregar al cliente final._
+
+---
+
+## MUESTRAS DE LA APP
+
+![](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/muestra.gift?raw=true)
