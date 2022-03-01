@@ -8,7 +8,7 @@ Tu Saldo VA es una app creada como herramienta para la recarga de saldo y pago d
 
 El objetivo es que el usuario acceda a una oferta de planes, seleccione uno o más y finalice la experiencia generando una orden que se procesa de forma externa.
 
-La app tiene la funcionabilida de descontar el stock de la base de datos al finalizar una compra, al mismo tiempo genera una orden y le muestra el usuario el código de seguimiento. (puede saber el estado de su compra o hablar con un asesor a través de whatsapp, con un botón que aparece al finalizar la compra) Si un producto no tiene stock no puede ser agregado al carrito.
+La app tiene la funcionabilidad de descontar el stock de la base de datos al finalizar una compra, al mismo tiempo genera una orden y le muestra el usuario el código de seguimiento. (puede saber el estado de su compra o hablar con un asesor a través de whatsapp, con un botón que aparece al finalizar la compra) Si un producto no tiene stock no puede ser agregado al carrito.
 
 ## Tecnologías
 
