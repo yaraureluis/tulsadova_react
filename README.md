@@ -10,8 +10,6 @@ El objetivo es que el usuario acceda a una oferta de planes, seleccione uno o m�
 
 La app tiene la funcionabilida de descontar el stock de la base de datos al finalizar una compra, al mismo tiempo genera una orden y le muestra el usuario el código de seguimiento. (puede saber el estado de su compra o hablar con un asesor a través de whatsapp, con un botón que aparece al finalizar la compra) Si un producto no tiene stock no puede ser agregado al carrito.
 
----
-
 ## Tecnologías
 
 Para inicializar la app debes utilzar el comando npm start. En el desarrollo de la app se utilizaron las siguientes tecnoligías:
@@ -23,15 +21,11 @@ Para inicializar la app debes utilzar el comando npm start. En el desarrollo de 
 - React router dom 5.2.0"
 - La base de datos utilizada es Firebase 8.8.0
 
----
-
 ## Autor
 
 Ing. Luis Alexander Yaraure Cossi, estudiante de la Carrera Desarrollo Full Stack en CODERHOUSE.
 
 https://github.com/yaraureluis
-
----
 
 ## MUESTRAS DE LA APP (Escritorio)
 
@@ -43,4 +37,4 @@ https://github.com/yaraureluis
 
 ---
 
-**IMPORTANTE:** _este es un proyecto en desarrollo, que está basado en los **requerimientos del Curso React Js de CODERHOUSE.** Debido a ésto el total de funcionalidades (como la categorización de los planes: Diamante, Oro, Plata, Bronce) serán agregadas posteriormente para entregar al cliente final._
+**IMPORTANTE:** \_este es un proyecto en desarrollo, que está basado en los **requerimientos del Curso React Js de CODERHOUSE.** Debido a ésto el total de funcionalidades (como la categorización de los planes: Diamante, Oro, Plata, Bronce) serán agregadas posteriormente para entregar al cliente final.
