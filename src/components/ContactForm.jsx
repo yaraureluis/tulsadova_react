@@ -46,7 +46,7 @@ function ContactForm({ handleSubmit, handleReset, handleChange, contactSent, sho
             </form>
           </div>
           <div className="col-md-6">
-            <img src="https://yaraureluis.github.io/tusaldoVA/assets/imagenes/abrazo.jpg" alt="Personas abrazadas emotivamente" width="100%" />
+            <img src="/imagenes/abrazo.jpg" alt="Personas abrazadas emotivamente" width="100%" />
           </div>
         </div>
 

@@ -15,7 +15,7 @@ function Questions() {
               <Accordion.Body>
                 <ol>
                   <li>
-                    Selecciona uno o más <Link to="planes.html">planes</Link> disponibles.
+                    Selecciona uno o más <Link to="/categoria/todas">planes</Link> disponibles.
                   </li>
                   <li>
                     Comunícate a través de Whatsapp o por la opción <Link to="/contacto">contacto</Link> de nuestra página web, para ser atendido por nuestro equipo.
@@ -33,7 +33,7 @@ function Questions() {
               <Accordion.Body>
                 <ul>
                   <li>
-                    Transferencia Bancaria: <Link to="contacto.html">comunícate</Link> con nostros para saber con que bancos trabajamos.
+                    Transferencia Bancaria: <Link to="/contacto">comunícate</Link> con nostros para saber con que bancos trabajamos.
                   </li>
                   <li>Mercadopago: a través de la opción "enviar dinero".</li>
                 </ul>
@@ -46,7 +46,7 @@ function Questions() {
               <Accordion.Body>
                 <ul>
                   <li>
-                    Es posible, siempre que te encuentres en el área de atención "face to face", puedes conocer las zonas disponibles haciendo clic <Link to="contacto.html"> aquí.</Link>
+                    Es posible, siempre que te encuentres en el área de atención "face to face", puedes conocer las zonas disponibles haciendo clic <Link to="/contacto"> aquí.</Link>
                   </li>
                   <li>Siempre recomendamos utilizar los canales virtuales, pagar por transferencia bancaria o mercadopago, sin embargo, esta alternativa puede ser utilizada a conveniencia de las partes, sin que sea una obligación para "Tu Saldo VA" estar disponible en todo momento.</li>
                 </ul>

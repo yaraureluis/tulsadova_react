@@ -13,7 +13,7 @@ function NavBar() {
         <Container>
           <Navbar.Brand>
             <NavLink activeClassName="linkActivo" className="linkPropio" to="/">
-              <img src="https://yaraureluis.github.io/tusaldoVA/assets/imagenes/logo_blanco.svg" alt="logo_marca" height={"40px"} />
+              <img src="/imagenes/logo_blanco.svg" alt="logo_marca" height={"40px"} />
             </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

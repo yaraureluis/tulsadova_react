@@ -9,7 +9,7 @@ function Footer() {
         <Row className="py-2 mx-0 px-5 fondoFooter ">
           <Col md={4} className="mt-3 ">
             <Link className="linkPropio" to="/">
-              <img src="https://yaraureluis.github.io/tusaldoVA/assets/imagenes/logo_blanco.svg" alt="logo_marca" height={"40px"} />
+              <img src="/imagenes/logo_blanco.svg" alt="logo_marca" height={"40px"} />
             </Link>
           </Col>
           <Col md={4} className="mt-3 ps-md-5">
