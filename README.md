@@ -33,10 +33,14 @@ https://github.com/yaraureluis
 
 ---
 
-**IMPORTANTE:** _este es un proyecto en desarrollo, que está basado en los **requerimientos del Curso React Js de CODERHOUSE.** Debido a ésto el total de funcionalidades (como la categorización de los planes: Diamante, Oro, Plata, Bronce) serán agregadas posteriormente para entregar al cliente final._
+## MUESTRAS DE LA APP (Escritorio)
+
+![image](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/muestra.gif?raw=true)
+
+## MUESTRAS DE LA APP (Mobile)
+
+## ![image](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/muestra_mobile.gif?raw=true)
 
 ---
 
-## MUESTRAS DE LA APP
-
-![image](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/muestra.gif?raw=true)
+**IMPORTANTE:** _este es un proyecto en desarrollo, que está basado en los **requerimientos del Curso React Js de CODERHOUSE.** Debido a ésto el total de funcionalidades (como la categorización de los planes: Diamante, Oro, Plata, Bronce) serán agregadas posteriormente para entregar al cliente final._
