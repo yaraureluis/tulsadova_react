@@ -39,4 +39,4 @@ https://github.com/yaraureluis
 
 ## MUESTRAS DE LA APP
 
-![](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/muestra.gift?raw=true)
+![image](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/muestra.gif?raw=true)
