@@ -14,12 +14,14 @@ import CarouselSection from "./components/CarouselSection";
 import Spacer from "./components/Spacer";
 import PaymentMethods from "./components/PaymentMethods";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <CartProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <NavBar />
           <Switch>
             <Route exact path="/">

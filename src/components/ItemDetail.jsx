@@ -64,7 +64,7 @@ function ItemDetail({ prop, onAdd, ocultarContador }) {
               </div>
             </Card.Body>
           </Card>
-          <Card style={{ width: "100%", marginTop: "12px" }}>
+          <Card style={{ width: "100%", marginTop: "12px" }} className="mb-4">
             <Card.Body>
               <Card.Text style={{ fontSize: "12px", textAlign: "justify", fontWeight: "bold" }} className="mb-1 pb-0">
                 VERSIÓN BETA, SOLO DIPONIBLE PLAN BRONCE.
