@@ -27,10 +27,6 @@ Ing. Luis Alexander Yaraure Cossi, estudiante de la Carrera Desarrollo Full Stac
 
 https://github.com/yaraureluis
 
-## RUTA AL PROYECTO
-
-https://tusaldova.netlify.app/
-
 ## MUESTRAS DE LA APP (Escritorio)
 
 ![image](https://github.com/yaraureluis/tulsadova_react/blob/main/public/imagenes/muestra.gif?raw=true)
